@@ -3,6 +3,8 @@
 describe('My First Test', () => {
   it('Visits the app root url', () => {
     cy.visit('/')
-    cy.contains('h1', 'Welcome to Your Vue.js + TypeScript App')
+    cy.contains('a', 'Home')
+    cy.contains('a', 'Login')
+    cy.get('img[alt="Vue logo"]').should('be.visible')
   })
 })
